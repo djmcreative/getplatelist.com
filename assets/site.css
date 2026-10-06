@@ -1,0 +1,58 @@
+/* Platelist website: the app's look. White, ink, hairlines, the logo's green as the one accent. */
+:root {
+  --bg: #ffffff;
+  --ink: #111111;
+  --soft: #6f6f6f;
+  --faint: #a6a6a6;
+  --line: #ececea;
+  --fill: #f4f4f2;
+  --green: #31aa04;
+  --green-dark: #268203;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--green-dark); }
+a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.wrap { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+header { padding: 28px 0 8px; }
+header img { height: 34px; width: auto; display: block; }
+main { padding-bottom: 48px; }
+footer { border-top: 1px solid var(--line); padding: 20px 0 40px; color: var(--soft); font-size: 14px; }
+footer nav { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 8px; }
+footer a { color: var(--soft); font-weight: 600; text-decoration: none; }
+
+/* Home */
+.hero { padding: 48px 0 24px; }
+.hero h1 { font-size: clamp(32px, 7vw, 46px); line-height: 1.08; letter-spacing: -0.03em; font-weight: 800; margin: 0 0 14px; text-wrap: balance; }
+.hero p { font-size: 18px; color: var(--soft); margin: 0 0 24px; max-width: 34em; }
+.badge { display: inline-block; padding: 12px 18px; border-radius: 12px; background: var(--ink); color: #fff; font-weight: 600; text-decoration: none; }
+.badge.quiet { background: var(--fill); color: var(--ink); }
+.points { list-style: none; padding: 0; margin: 32px 0 0; border-top: 1px solid var(--line); }
+.points li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.points b { display: block; font-weight: 600; }
+.points span { color: var(--soft); }
+
+/* Legal pages */
+.legal h1 { font-size: 34px; letter-spacing: -0.03em; font-weight: 800; margin: 28px 0 4px; }
+.legal .updated { color: var(--soft); margin: 0 0 24px; }
+.legal h2 { font-size: 20px; letter-spacing: -0.02em; margin: 32px 0 8px; }
+.legal p, .legal li { max-width: 40em; }
+.legal table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
+.legal th, .legal td { text-align: left; vertical-align: top; padding: 10px 8px 10px 0; border-bottom: 1px solid var(--line); }
+.legal th { font-size: 13px; color: var(--soft); font-weight: 600; }
+.table-scroll { overflow-x: auto; }
+
+/* Invite links */
+.invite { text-align: center; padding: 64px 0; }
+.invite img { width: 72px; height: 72px; }
+.invite h1 { font-size: 26px; letter-spacing: -0.02em; margin: 18px 0 8px; }
+.invite p { color: var(--soft); margin: 0 0 24px; }
+.invite .actions { display: flex; flex-direction: column; gap: 10px; align-items: center; }

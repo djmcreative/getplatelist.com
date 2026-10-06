@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Platelist</title>
+  <link rel="icon" href="/assets/favicon.png">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <!-- GitHub Pages serves this page for any address it doesn't have, so invite links
+       (getplatelist.com/u/<username>) land here and offer to open the profile in the app. -->
+  <div class="wrap">
+    <header><a href="/"><img src="/assets/wordmark.png" alt="Platelist"></a></header>
+    <main>
+      <section class="invite" id="invite" hidden>
+        <img src="/assets/icon.png" alt="">
+        <h1 id="invite-title">Follow on Platelist</h1>
+        <p>Open this profile in the Platelist app to see what they're eating.</p>
+        <div class="actions">
+          <a class="badge" id="open-app" href="#">Open in Platelist</a>
+          <span class="badge quiet">Coming soon to the App Store</span>
+        </div>
+      </section>
+      <section class="invite" id="missing" hidden>
+        <h1>This page isn't here</h1>
+        <p><a href="/">Go to the Platelist home page</a></p>
+      </section>
+    </main>
+    <footer>
+      <nav><a href="/">Home</a><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a></nav>
+      Made in Minneapolis by DJM Creative.
+    </footer>
+  </div>
+  <script>
+    // Usernames are 3 to 20 lowercase letters, numbers, periods or underscores.
+    var match = location.pathname.match(/^\/u\/([a-z0-9._]{3,20})\/?$/i);
+    if (match) {
+      var username = match[1].toLowerCase();
+      document.getElementById('invite-title').textContent = 'Follow @' + username + ' on Platelist';
+      document.getElementById('open-app').href = 'platelist://u/' + username;
+      document.getElementById('invite').hidden = false;
+    } else {
+      document.getElementById('missing').hidden = false;
+    }
+  </script>
+</body>
+</html>
