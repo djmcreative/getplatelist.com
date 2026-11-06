@@ -35,6 +35,13 @@ footer a { color: var(--soft); font-weight: 600; text-decoration: none; }
 .hero p { font-size: 18px; color: var(--soft); margin: 0 0 24px; max-width: 34em; }
 .badge { display: inline-block; padding: 12px 18px; border-radius: 12px; background: var(--ink); color: #fff; font-weight: 600; text-decoration: none; }
 .badge.quiet { background: var(--fill); color: var(--ink); }
+/* App download links */
+.store-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
 .points { list-style: none; padding: 0; margin: 32px 0 0; border-top: 1px solid var(--line); }
 .points li { padding: 14px 0; border-bottom: 1px solid var(--line); }
 .points b { display: block; font-weight: 600; }
